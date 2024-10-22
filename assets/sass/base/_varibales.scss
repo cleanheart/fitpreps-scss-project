@@ -1,0 +1,78 @@
+/******* custom font ******/
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../webfonts/Gilroy-Black.ttf") format("truetype");
+  font-weight: 900; /* Black */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../webfonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: bold; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../webfonts/Gilroy-ExtraBold.ttf") format("truetype");
+  font-weight: 800; /* Extra Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../webfonts/Gilroy-Heavy.ttf") format("truetype");
+  font-weight: 700; /* Heavy */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../webfonts/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../webfonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../webfonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: normal; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../webfonts/Gilroy-SemiBold.ttf") format("truetype");
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../webfonts/Gilroy-Thin.ttf") format("truetype");
+  font-weight: 100; /* Thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../webfonts/Gilroy-UltraLight.ttf") format("truetype");
+  font-weight: 200; /* UltraLight */
+  font-style: normal;
+}
+
+$primary-color: rgba(253, 79, 1, 1);
+$primary-color-opacity: rgba(255, 241, 232, 1);
+$primary-color-opacity-2: rgba(255, 226, 210, 1);
+$white-color: rgba(255, 255, 255, 1);
+$text-black-color: rgba(14, 21, 35, 1);
+$off-white-color: rgba(240, 240, 240, 1);
+$box-shadow: 0px 6px 12px -6px rgba(24, 39, 75, 0.12), 0px 8px 24px -4px rgba(24, 39, 75, 0.08);

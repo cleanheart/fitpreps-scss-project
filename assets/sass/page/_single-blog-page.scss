@@ -1,0 +1,376 @@
+.single-blog-banner {
+  position: relative;
+  padding: 180px 64px 120px 64px;
+  margin-top: 48px;
+  z-index: 5;
+  // background: url("../../../assets/images/shafe-banner-bg.png");
+  background-blend-mode: overlay;
+  background-repeat: repeat;
+  clip-path: ellipse(87% 90% at 39% 10%);
+  background-color: $primary-color;
+  .content-wrapper {
+    display: flex;
+    gap: 50px;
+    .left {
+      width: 65%;
+      .title {
+        h2 {
+          color: $white-color;
+        }
+      }
+      .des {
+        max-width: 780px;
+        margin: 24px 0 48px 0;
+        p {
+          color: $white-color;
+        }
+      }
+      .icon-text-wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        .icon {
+          img {
+            border-radius: 50%;
+            border: 1px solid $white-color;
+          }
+        }
+        .curcel {
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: $white-color;
+        }
+        p {
+          color: $white-color;
+        }
+        .w-400 {
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+    .right {
+      width: 35%;
+      img {
+        max-width: 510px;
+      }
+    }
+  }
+  @include respond-to("xx-large") {
+    padding: 180px 16px 120px 16px;
+  }
+  @include respond-to("large") {
+    margin-top: 0px;
+    padding: 180px 64px 120px 64px;
+    clip-path: ellipse(148% 89% at 30% 10%);
+    .content-wrapper {
+      flex-direction: column;
+      .left {
+        width: 100%;
+      }
+      .right {
+        width: 100%;
+      }
+    }
+  }
+  @include respond-to("small") {
+    padding: 100px 16px 80px 16px;
+  }
+}
+
+/*********single blog section start hare*********/
+.single-blog {
+  padding: 88px 64px;
+  .content-wrapper {
+    display: flex;
+    gap: 34px;
+    .left {
+      width: 65%;
+      .title {
+        margin-bottom: 24px;
+        h5 {
+          color: $primary-color;
+        }
+      }
+      .des {
+        margin-bottom: 40px;
+        max-width: 780px;
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          color: rgba(14, 21, 35, 1);
+          a {
+            color: $primary-color;
+            text-decoration: underline;
+          }
+          .w-600 {
+            font-weight: 600;
+            color: $primary-color;
+          }
+          .w-600-black {
+            font-weight: 600;
+            color: #000;
+          }
+        }
+      }
+      ul {
+        flex-direction: column;
+        .title {
+          margin-bottom: 16px;
+          position: relative;
+          margin-left: 32px;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 1);
+            left: -16px;
+            top: 40%;
+          }
+        }
+      }
+      .img-wrapper {
+        margin-bottom: 40px;
+      }
+      .share-icon-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        p {
+          font-weight: 600;
+        }
+        .icon {
+          background: $primary-color;
+          color: $white-color;
+          border-radius: 50%;
+          font-size: 14px;
+          flex-shrink: 0;
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .last-icon {
+          background: $white-color !important;
+        }
+      }
+    }
+    .right {
+      width: 35%;
+      .popular-box {
+        padding: 32px 40px;
+        border-radius: 24px;
+        box-shadow: 0px 8px 24px -4px rgba(24, 39, 75, 0.08);
+        box-shadow: 0px 6px 12px -6px rgba(24, 39, 75, 0.12);
+        background: #fff;
+        .icon-wrapper {
+          margin-top: 32px;
+          margin-bottom: 24px;
+          display: flex;
+          align-items: center;
+          .icon {
+            img {
+              width: 56px;
+              border-radius: 4px;
+            }
+          }
+          .text {
+            margin: 0 16px 0 13px;
+          }
+          .circle {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid $primary-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            .icon {
+              color: $primary-color;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+        .bottom {
+          ul {
+            margin-top: 32px;
+            flex-direction: column;
+            gap: 16px;
+            li {
+              display: flex;
+              align-items: center;
+              gap: 12px;
+              img {
+                width: 40px;
+                border-radius: 50%;
+              }
+              a {
+                color: rgba(14, 21, 35, 1);
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+    @include respond-to("xlarge") {
+      flex-direction: column;
+      .left {
+        width: 100%;
+      }
+      .right {
+        width: 50%;
+      }
+    }
+    @include respond-to("large") {
+      flex-direction: column;
+      .left {
+        width: 100%;
+      }
+      .right {
+        width: 70%;
+      }
+    }
+    @include respond-to("medium") {
+      flex-direction: column;
+      .left {
+        width: 100%;
+      }
+      .right {
+        width: 90%;
+      }
+    }
+    @include respond-to("small") {
+      flex-direction: column;
+      .left {
+        width: 100%;
+      }
+      .right {
+        width: 100%;
+        .popular-box {
+          padding: 16px 20px;
+        }
+      }
+    }
+  }
+  @include respond-to("small") {
+    padding: 48px 16px;
+  }
+}
+/*********single blog section End hare*********/
+
+/*********Related Posts section start hare*********/
+.Related-Posts {
+  padding: 30px 64px 110px 64px;
+  .heading {
+    margin-bottom: 64px;
+  }
+  .last-slider-wrapper {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    position: relative;
+    .slick-arrow {
+      position: absolute;
+      right: 0px;
+      top: -56px;
+      transition: 0.3s;
+      &::before {
+        color: rgba(14, 21, 35, 1);
+        width: 56px;
+        font-size: 24px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid rgba(14, 21, 35, 1);
+        transition: 0.3s;
+      }
+      &:hover {
+        &::before {
+          color: $white-color;
+          background-color: $primary-color;
+          border: 1px solid $primary-color;
+        }
+      }
+    }
+    .slick-prev {
+      left: 93%;
+    }
+    .slick-next {
+      &::before {
+        color: $white-color;
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+      }
+    }
+    .inner {
+      box-shadow: 0px 8px 24px -4px rgba(24, 39, 75, 0.08);
+      box-shadow: 0px 6px 12px -6px rgba(24, 39, 75, 0.12);
+      width: calc(33% - 10px);
+      border-radius: 24px;
+      background: #ffffff;
+      padding-bottom: 24px;
+      margin-bottom: 16px;
+      .img-wrapper {
+        margin: 8px 8px 24px 8px;
+        border-radius: 24px;
+      }
+      .title {
+        margin: 0 24px 16px 24px;
+      }
+      .des {
+        margin: 0 24px;
+      }
+      .icon-wrapper {
+        display: flex;
+        align-items: center;
+        margin: 24px 0 40px 24px;
+        gap: 10px;
+        .circel {
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: $primary-color;
+        }
+        p.name {
+          font-size: 16px;
+          line-height: 32px;
+          font-weight: 500;
+          color: rgba(14, 21, 35, 1);
+        }
+        p.date {
+          font-size: 16px;
+          line-height: 32px;
+          font-weight: 400;
+          color: rgba(142, 142, 142, 1);
+        }
+      }
+      .click-text {
+        margin-left: 24px;
+        a {
+          color: $primary-color;
+          text-decoration: underline;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  @include respond-to("small") {
+    padding: 30px 16px 70px 16px;
+    .heading {
+      margin-bottom: 32px;
+    }
+  }
+}
+/*********Related Posts section end hare*********/

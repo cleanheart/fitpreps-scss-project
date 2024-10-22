@@ -1,0 +1,49 @@
+.section-btm-icon-text {
+  display: flex;
+  align-items: center;
+  .inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    .icon {
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .text {
+      p {
+        color: $white-color;
+      }
+    }
+  }
+  .inner + .inner {
+    margin-left: 28px;
+    padding-left: 28px;
+    border-left: 1px solid rgba(254, 167, 128, 1);
+  }
+  @include respond-to("small") {
+    flex-direction: column;
+    .inner {
+      margin-left: 0;
+      align-self: start;
+      gap: 12px;
+      .icon {
+        width: 32px;
+        height: 32px;
+      }
+      .text {
+        display: flex;
+        gap: 1px;
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+    .inner + .inner {
+      margin-left: 0;
+      border-left: 0;
+      padding-left: 0;
+    }
+  }
+}

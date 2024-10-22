@@ -1,0 +1,11 @@
+.transparent-header {
+  z-index: 7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  .nav-wrapper {
+    background: transparent;
+  }
+}

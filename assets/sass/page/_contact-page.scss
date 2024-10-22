@@ -1,0 +1,350 @@
+.contact-banner {
+  position: relative;
+  padding: 180px 64px 120px 64px;
+  margin-top: 48px;
+  z-index: 5;
+  background: url("../../../assets/images/shafe-banner-bg.png");
+  background-blend-mode: overlay;
+  background-repeat: repeat;
+  clip-path: ellipse(87% 90% at 39% 10%);
+  background-color: $primary-color;
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    .title {
+      h3 {
+        color: $white-color;
+        text-transform: uppercase;
+        // font-size: 64px;
+      }
+    }
+  }
+  @include respond-to("large") {
+    padding: 120px 16px 114px 16px;
+  }
+  @include respond-to("medium") {
+    clip-path: ellipse(126% 89% at 25% 10%);
+    margin-top: 0;
+    padding: 150px 16px 58px 16px;
+    .content-wrapper {
+      .title {
+        h3 {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  @include respond-to("small") {
+    clip-path: ellipse(175% 87% at 25% 10%);
+    padding: 100px 16px 80px 16px;
+  }
+}
+/*******shafe area start hare  *******/
+.contact-adress {
+  padding: 88px 64px 100px 64px;
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    .inner {
+      .icon-wrapper {
+        margin-top: 32px;
+        display: flex;
+        gap: 12px;
+        .text {
+          max-width: 220px;
+          p {
+            color: #0e1523;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 32px;
+            .w-400 {
+              font-weight: 400;
+            }
+          }
+        }
+        .last-text {
+          max-width: 320px !important;
+        }
+      }
+      ul {
+        flex-direction: column;
+        margin-top: 36px;
+        li {
+          display: flex;
+          gap: 12px;
+          margin-bottom: 32px;
+          align-items: center;
+          .icon {
+            svg {
+              width: 40px;
+            }
+          }
+          a {
+            text-decoration: underline;
+            color: rgba(14, 21, 35, 1);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 32px;
+          }
+          .text {
+            max-width: 350px;
+            p {
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 32px;
+              .w-600 {
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include respond-to("large") {
+    .content-wrapper {
+      flex-wrap: wrap;
+      .inner {
+        width: calc(50% - 50px);
+      }
+    }
+  }
+  @include respond-to("medium") {
+    padding: 88px 16px 100px 16px;
+  }
+  @include respond-to("small") {
+    .content-wrapper {
+      flex-wrap: wrap;
+      .inner {
+        width: 100%;
+        .title {
+          h6 {
+            font-size: 18px;
+          }
+        }
+        .icon-wrapper {
+          margin-top: 24px;
+          .icon {
+            svg {
+              width: 32px;
+            }
+          }
+          .text {
+            p {
+              font-size: 16px !important;
+              line-height: 24px !important;
+            }
+          }
+        }
+        ul {
+          margin-top: 24px;
+          li {
+            margin-bottom: 20px;
+            gap: 8px;
+            .icon {
+              svg {
+                width: 32px;
+              }
+            }
+            a {
+              font-size: 16px;
+              line-height: 24px;
+              font-weight: 500;
+            }
+            .text {
+              p {
+                font-size: 16px;
+                line-height: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*******shafe area End hare  *******/
+
+/*******Delivery form section start hare  *******/
+.contact-from {
+  padding: 0 64px 150px 64px;
+  .content-wrapper {
+    display: flex;
+    gap: 4%;
+    .right {
+      width: 60%;
+      .contact-form {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-family: "Arial", sans-serif;
+
+        .form-group {
+          display: flex;
+          gap: 16px;
+
+          input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+
+            &:focus {
+              outline: none;
+              border-color: #fd4f01;
+            }
+          }
+          .input-text {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            .icon {
+              position: absolute;
+              right: 20px;
+              color: $primary-color;
+            }
+          }
+        }
+
+        textarea {
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          font-size: 16px;
+          min-height: 100px;
+          resize: none;
+
+          &:focus {
+            outline: none;
+            border-color: #fd4f01;
+          }
+        }
+
+        .file-upload {
+          // display: flex;
+          // flex-direction: column-reverse;
+          // gap: 10px;
+          .text {
+            p {
+              font-size: 18px;
+              font-weight: 400;
+              color: rgba(14, 21, 35, 1);
+              .w-600 {
+                font-weight: 700;
+                font-size: 18px;
+              }
+            }
+          }
+          .btn-wrapper {
+            margin-top: 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            .submit-area {
+              .submit-btn {
+                font-size: 16px;
+                font-weight: 600;
+                transition: 0.3s;
+                border: 1px solid $primary-color;
+                .icon {
+                  color: $white-color;
+                  transition: 0.3s;
+                }
+                &:hover {
+                  border: 1px solid $primary-color;
+                  .icon {
+                    color: $primary-color;
+                  }
+                }
+              }
+            }
+          }
+
+          label {
+            display: flex;
+            gap: 8px;
+            background-color: #000;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            .icon {
+              color: $primary-color;
+              border-radius: 50%;
+              border: 1px solid $primary-color;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 24px;
+              height: 24px;
+            }
+          }
+
+          input {
+            display: none;
+          }
+
+          span {
+            font-size: 14px;
+            color: #555;
+          }
+        }
+      }
+    }
+  }
+  @include respond-to("large") {
+    .content-wrapper {
+      flex-direction: column;
+      .left {
+        width: 100%;
+      }
+      .right {
+        width: 100%;
+      }
+    }
+  }
+  @include respond-to("medium") {
+    padding: 0 16px 100px 16px;
+  }
+  @include respond-to("small") {
+    padding: 0 16px 70px 16px;
+    .content-wrapper {
+      .right {
+        .form-group {
+          flex-direction: column;
+          .input-text {
+            width: 100% !important;
+          }
+        }
+        .file-upload {
+          .text {
+            p {
+              font-size: 16px !important;
+              .w-600 {
+                font-size: 16px !important;
+              }
+            }
+          }
+          .btn-wrapper {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}
+/*******Delivery form section End hare  *******/
+.faq-area {
+  .main-content-wrapper {
+    margin-top: 40px;
+  }
+}
