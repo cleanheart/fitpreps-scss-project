@@ -100,10 +100,6 @@
       width: 150px;
       transform: rotate(180deg);
     }
-    // @include respond-to("large") {
-    //   top: 44%;
-    //   left: 55%;
-    // }
 
     @include respond-to("medium") {
       top: 20%;
@@ -533,6 +529,14 @@
           opacity: 1;
           color: $text-black-color;
           transition: 0.3s;
+        }
+        .slick-next {
+          color: $white-color!important;
+          background-color: $primary-color;
+          border: 1px solid $primary-color;
+          &::before {
+            color: $white-color;
+          }
         }
         .inner {
           background: $white-color;

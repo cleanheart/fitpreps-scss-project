@@ -406,6 +406,19 @@ header {
       line-height: 24px;
       text-transform: uppercase;
       color: white; }
+      header .nav-wrapper .nav ul li a .arrow-icon {
+        margin-left: 5px;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        display: inline-block; }
+      header .nav-wrapper .nav ul li a:hover .arrow-icon {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg); }
     header .nav-wrapper .nav ul li + li {
       padding-left: 66px; }
     header .nav-wrapper .right {
@@ -490,63 +503,97 @@ header {
     @media (max-width: 576px) {
       header .nav-wrapper {
         padding: 16px; } }
-    header .nav-wrapper .mobile-menu {
-      padding-top: 10px;
-      width: 100%;
-      position: absolute;
-      left: 0;
-      top: 117px;
-      background: #fd4f01;
-      display: none; }
-      header .nav-wrapper .mobile-menu ul {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        text-align: center; }
-        header .nav-wrapper .mobile-menu ul li a {
-          color: white;
-          font-size: 18px;
-          font-weight: 600;
-          line-height: 24px; }
-        header .nav-wrapper .mobile-menu ul li ul {
-          margin-top: 16px; }
-          header .nav-wrapper .mobile-menu ul li ul li a {
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 32px; }
-          header .nav-wrapper .mobile-menu ul li ul li:nth-child(2) {
-            margin: 0px 0px; }
-        header .nav-wrapper .mobile-menu ul li:nth-child(2) {
-          margin: 28px 0px; }
-      header .nav-wrapper .mobile-menu .login-wrapper {
-        padding: 0 16px;
-        margin-top: 32px; }
-        header .nav-wrapper .mobile-menu .login-wrapper a {
-          border-radius: 8px;
-          padding: 12px;
-          color: white;
-          font-weight: 600;
-          line-height: 24px;
-          text-transform: capitalize;
-          width: 100%;
-          display: -webkit-inline-box;
-          display: -ms-inline-flexbox;
-          display: inline-flex;
-          gap: 8px;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center;
-          border: 1px solid white; }
-      @media (max-width: 576px) {
-        header .nav-wrapper .mobile-menu {
-          top: 69px; } }
     @media (max-width: 576px) {
       header .nav-wrapper {
         padding: 16px; } }
+  header .mobile-menu {
+    padding-bottom: 20px;
+    padding-top: 10px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 117px;
+    opacity: 0;
+    visibility: hidden;
+    background: #fd4f01;
+    z-index: 1;
+    -webkit-transition: 1.5s;
+    -o-transition: 1.5s;
+    transition: 1.5s; }
+    header .mobile-menu ul {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      text-align: center; }
+      header .mobile-menu ul li a {
+        color: white; }
+      header .mobile-menu ul li .heading {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 5px;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase; }
+        header .mobile-menu ul li .heading .arrow-icon {
+          -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+          -webkit-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s; }
+        header .mobile-menu ul li .heading:hover .arrow-icon {
+          -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+          transform: rotate(90deg); }
+      header .mobile-menu ul li .submenu {
+        margin-top: 16px;
+        gap: 10px; }
+        header .mobile-menu ul li .submenu li a {
+          color: white;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 32px; }
+        header .mobile-menu ul li .submenu li:nth-child(2) {
+          margin: 0px 0px; }
+      header .mobile-menu ul li:nth-child(2) {
+        margin: 28px 0px; }
+    header .mobile-menu .login-wrapper {
+      padding: 0 16px;
+      margin-top: 32px; }
+      header .mobile-menu .login-wrapper a {
+        border-radius: 8px;
+        padding: 12px;
+        color: white;
+        font-weight: 600;
+        line-height: 24px;
+        text-transform: capitalize;
+        width: 100%;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        gap: 8px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        border: 1px solid white; }
+    @media (max-width: 576px) {
+      header .mobile-menu {
+        top: 69px; } }
+  header .mobile-menu.menu-show {
+    position: inherit;
+    top: 0;
+    left: 0;
+    top: 117px;
+    opacity: 1;
+    visibility: visible; }
 
 .transparent-header {
   z-index: 7;
@@ -1427,6 +1474,12 @@ footer {
           -webkit-transition: 0.3s;
           -o-transition: 0.3s;
           transition: 0.3s; }
+        .items-slider .slider-wrapper .tab-content .inner-wrapper .slick-next {
+          color: white !important;
+          background-color: #fd4f01;
+          border: 1px solid #fd4f01; }
+          .items-slider .slider-wrapper .tab-content .inner-wrapper .slick-next::before {
+            color: white; }
         .items-slider .slider-wrapper .tab-content .inner-wrapper .inner {
           background: white;
           cursor: pointer;

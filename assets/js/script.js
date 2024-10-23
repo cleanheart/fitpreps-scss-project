@@ -8,16 +8,22 @@ document.querySelector(".menu-icon").addEventListener("click", function () {
   this.classList.toggle("active");
 });
 
+//mobile menu show-hide
+const menuIcon = document.getElementById("menuIcon");
+const mobileMenuWrapper = document.getElementById("mobile-menu-wrapper");
+
+menuIcon.addEventListener("click", function () {
+  menuIcon.classList.toggle("menu-show");
+  mobileMenuWrapper.classList.toggle("menu-show");
+});
+
 // prep letter
 document.addEventListener("DOMContentLoaded", function () {
-  // `prep` ক্লাস যুক্ত `h1` এলিমেন্ট সিলেক্ট করুন
   const prepElement = document.querySelector(".prep");
   const text = prepElement.textContent;
 
-  // শেষ অক্ষরটি আলাদা করুন
   const lastChar = text.slice(-1);
 
-  // মূল টেক্সট থেকে শেষ অক্ষরটি বাদ দিয়ে HTML আপডেট করুন
   prepElement.innerHTML = `${text.slice(
     0,
     -1
