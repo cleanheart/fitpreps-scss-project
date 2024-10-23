@@ -1,6 +1,6 @@
 footer {
   padding: 123px 0px 24px 0px;
-  background: url("../../../assets/images/footer-bg.png");
+  background: url("../../assets/images/footer-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -49,6 +49,10 @@ footer {
                 font-size: 14px;
                 line-height: 32px;
                 font-weight: 400;
+                transition: 0.3s;
+                &:hover {
+                  color: $white-color;
+                }
               }
             }
           }

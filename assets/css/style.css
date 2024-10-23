@@ -607,7 +607,7 @@ header {
 
 footer {
   padding: 123px 0px 24px 0px;
-  background: url("../../../assets/images/footer-bg.png");
+  background: url("../../assets/images/footer-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
@@ -656,7 +656,12 @@ footer {
           color: #a3a3a3;
           font-size: 14px;
           line-height: 32px;
-          font-weight: 400; }
+          font-weight: 400;
+          -webkit-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s; }
+          footer .content-wrapper .top .list-wrapper .footer-column ul li a:hover {
+            color: white; }
       footer .content-wrapper .top .list-wrapper .footer-last-column {
         display: none;
         margin-top: 32px; }
@@ -2227,6 +2232,12 @@ footer {
           -webkit-transition: 0.3s;
           -o-transition: 0.3s;
           transition: 0.3s; }
+        .items-slider-2 .slider-wrapper .tab-content .inner-wrapper .slick-next {
+          color: white !important;
+          background-color: #fd4f01;
+          border: 1px solid #fd4f01; }
+          .items-slider-2 .slider-wrapper .tab-content .inner-wrapper .slick-next::before {
+            color: white; }
         .items-slider-2 .slider-wrapper .tab-content .inner-wrapper .inner {
           background: white;
           cursor: pointer;
